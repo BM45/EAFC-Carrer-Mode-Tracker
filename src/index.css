@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+  body {
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    background-color: #050811;
+    color: #f1f5f9;
+    background-image:
+      radial-gradient(ellipse 90% 55% at 50% -10%, rgba(204, 255, 0, 0.09), transparent 70%),
+      radial-gradient(ellipse 65% 45% at 100% 10%, rgba(5, 241, 205, 0.07), transparent 60%),
+      radial-gradient(ellipse 70% 50% at 0% 90%, rgba(14, 165, 233, 0.06), transparent 70%),
+      radial-gradient(ellipse 50% 50% at 50% 50%, rgba(11, 17, 32, 0.7), transparent 100%);
+    background-attachment: fixed;
+  }
+  h1, h2, h3, .font-display {
+    font-family: 'Rajdhani', 'Outfit', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* EA FC Game Background Pattern (Triangular Mesh & Tactical Grid) */
+.ea-fc-triangles {
+  background-image: radial-gradient(circle at 50% 0%, rgba(204, 255, 0, 0.04) 0%, transparent 60%),
+                    url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 4L44 38H4z' fill='none' stroke='rgba(255,255,255,0.022)' stroke-width='1'/%3E%3C/svg%3E");
+}
+
+/* EA FC 26/27 Iconic Inverted Triangle Polygon */
+.fc-triangle {
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.fc-polygon-badge {
+  clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+}
+
+.fc-angle-cut {
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+}
+
+/* Authentic EA FC High-Tech Card Surfaces */
+.fc-card {
+  background: linear-gradient(145deg, rgba(16, 24, 40, 0.82) 0%, rgba(10, 15, 26, 0.9) 55%, rgba(6, 9, 16, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+}
+
+.fc-card-interactive {
+  background: linear-gradient(145deg, rgba(16, 24, 40, 0.82) 0%, rgba(10, 15, 26, 0.9) 55%, rgba(6, 9, 16, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fc-card-interactive:hover {
+  border-color: rgba(204, 255, 0, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.8), 0 0 25px -5px rgba(204, 255, 0, 0.15);
+}
+
+/* 3D Perspective Card Tilt Container */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+/* EA SPORTS FC 26/27 Neon Glows */
+.shadow-fc-volt {
+  box-shadow: 0 0 25px rgba(204, 255, 0, 0.3), inset 0 1px 0 rgba(204, 255, 0, 0.4);
+}
+
+.shadow-fc-cyan {
+  box-shadow: 0 0 25px rgba(5, 241, 205, 0.3), inset 0 1px 0 rgba(5, 241, 205, 0.4);
+}
+
+.text-fc-volt {
+  color: #ccff00;
+}
+
+.bg-fc-volt {
+  background-color: #ccff00;
+}
+
+.border-fc-volt {
+  border-color: #ccff00;
+}
+
+/* Futuristic Carbon Fiber Subtle Overlay */
+.bg-carbon-pattern {
+  background-color: #060912;
+  background-image: radial-gradient(rgba(204, 255, 0, 0.05) 1px, transparent 0),
+                    radial-gradient(rgba(5, 241, 205, 0.04) 1px, #060912 1px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Custom football pitch background with high-fidelity grass stripes */
+.pitch-canvas {
+  background: radial-gradient(circle at center, #0f361f 0%, #0a2415 70%, #05130b 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.pitch-canvas::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.035) 0px,
+    rgba(255, 255, 255, 0.035) 45px,
+    transparent 45px,
+    transparent 90px
+  );
+  pointer-events: none;
+}
+
+/* Custom modern scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(5, 8, 17, 0.85);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(204, 255, 0, 0.6);
+}
+

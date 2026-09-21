@@ -1,0 +1,6 @@
+{
+  "name": "FIFA Career Mode Tracker",
+  "description": "Comprehensive career mode tracker for FIFA / EA FC with deep tracking for both Manager and Player career modes, interactive squad pitch, match logs, transfers, trophy cabinet, awards, and analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
